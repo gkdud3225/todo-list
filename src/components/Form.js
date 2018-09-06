@@ -1,10 +1,10 @@
 import React from 'react';
 import './Form.css';
 
-const Form = ({value, onCreate, onChange, onKeyPress}) => {
+const Form = ({value, onCreate, onChange, onKeyPress, color}) => {
     return (
         <div className="form">
-            <input type="text" value={value} onChange={onChange} onKeyPress={onKeyPress} />
+            <input type="text" value={value} onChange={onChange} onKeyPress={onKeyPress} style={{color}}/>
             <div className="create-button" onClick={onCreate}>추가</div>
         </div>
     );
