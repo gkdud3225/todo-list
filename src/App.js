@@ -64,15 +64,10 @@ class App extends Component {
     const {input, todos} = this.state;
     const {handleCreate, handleChange, handleKeyPress, handleToggle, handleRemove} = this;
     return (
-        <TodoListTemplate form={(
-          <Form
-            value={input}
-            onCreate={handleCreate}
-            onChange={handleChange}
-            onKeyPress={handleKeyPress}
-          />
-        )}>
-          <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
+        <TodoListTemplate form={
+          <Form value={input} onCreate={handleCreate} onChange={handleChange} onKeyPress={handleKeyPress} />
+        }>
+          <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove} />
         </TodoListTemplate>
     );
   }
