@@ -32,9 +32,9 @@ class App extends Component {
       todos: todos.concat({
         id: this.id++,
         text: input,
-        checked: false
+        checked: false,
+        color: color
       }),
-      color: color
     })
   }
 
@@ -77,7 +77,7 @@ class App extends Component {
     return (
         <TodoListTemplate form={<Form value={input} onCreate={handleCreate} onChange={handleChange} onKeyPress={handleKeyPress} color={color} />}
           palette={<Palette colors={colors} selected={color} onSelect={handleSelectColor} />}>
-          <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove} color={color} />
+          <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove} />
         </TodoListTemplate>
     );
   }

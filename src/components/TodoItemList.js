@@ -9,12 +9,12 @@ class TodoItemList extends Component {
     }
 
     render() {
-        const {todos, onToggle, onRemove, color} = this.props;
+        const {todos, onToggle, onRemove} = this.props;
         /* todos 안에 있는 객체들을 화면에 보여주기 위해선 객체 배열을 컴포넌트 배열로 변환해야한다.
         * 배열을 렌더링 할 때는 key값이 꼭 있어야 한다. index를 key로 사용하는 것은 권장하지 않음.
         */
         const todoList = todos.map(
-            ({id, text, checked}) => (
+            ({id, text, checked, color}) => (
                 <TodoItem id={id} text={text} checked={checked} onToggle={onToggle} onRemove={onRemove} key={id} color={color} />
             )
         );

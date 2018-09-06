@@ -4,7 +4,7 @@ import './Palette.css';
 /* 동적인 스타일을 줄때는 style={}을 사용한다. 또, 객체를 전달하는 것이기 때문에 {{}}로 사용해야 한다. */
 const Color = ({color, active, onClick}) => {
     return (
-        <div className={`color $(active && 'active'}`} style={{background: color}} onClick={onClick}></div>
+        <div className={`color ${active && 'active'}`} style={{background: color}} onClick={onClick}></div>
     );
 }
 
